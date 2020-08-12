@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div id="bottomHeader">
+          <!-- <div class="container-fluid "> -->
+           <nav class="navbar navbar-dark navbar-expand-md fi" style="background-color: #17001e;">
+            <a class="navbar-brand" href=""></a>
+            <button data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarResponsive" type="button" class="navbar-toggler order-first">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a href="index.html" class="nav-link text-light">Home</a>
+                </li>
+                <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle text-light"  data-toggle="dropdown" role="button" href="#">Services</a>
+                  <div class="dropdown-menu ">           
+                    <a class="dropdown-item" href="#">ICT</a>           
+                    <a class="dropdown-item" href="#">EDUCATION</a>          
+                     <a class="dropdown-item" href="#">ENTERTAINMENT</a>         
+                    </div>
+                 </li> 
+                 <li class="nav-item dropdown"> 
+                  <a class="nav-link dropdown-toggle text-light"  data-toggle="dropdown" role="button" href="">Staff</a>
+                  <div class="dropdown-menu text-white ">           
+                    <a class="dropdown-item" href="#">Earl Samm</a>           
+                    <a class="dropdown-item" href="#">Fred Chuks</a>          
+                     <a class="dropdown-item" href="#">Francisco Ofili</a>         
+                    </div>
+                 </li> 
+                 <li class="nav-item">
+                  <a href="form.html" class="nav-link text-light">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-light"> About Us</a>
+                </li>
+                <li class="nav-item" >
+  
+              </ul>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+           </nav>
+        <!-- </div> -->
+        </div>
+      </header>
+      <h3 class="text-center ">Personal Details</h3>
+      <form>
+      <div class="container-fluid form-group">
+          <div class="row">
+            <div class="col-sm-4">
+                <label for="fname">First Name:</label>
+                <input type="text" class="form-control" id="fname" placeholder="Input Name">
+            </div>
+            <div class="col-sm-4">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" id="lname" placeholder="Input Name">
+            </div>
+            <div class="col-sm-4">
+                <label for="date">Date Of Birth:</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control"  id="email" placeholder="Input E-mail">
+            </div>
+            <div class="col-sm-4">
+                <label for="no">Phone Number:</label>
+                <input type="number" class="form-control"id="no" placeholder="Input Name">
+            </div>
+            <div class="col-sm-4">
+                <label for="comm">Comment/Complaint:</label>
+                <!-- <input type="text" class="form-control" id="comm" placeholder="Input Name"> -->
+                <textarea name="comm" id="comm" cols="30" rows="2" placeholder="Say Something...."></textarea>
+            </div>
+          </div>
+          <div class="row">
+              <button id="btn" class="btn btn-outline-primary ml-3" onclick="my">Submit</button>
+          </div>
+      </div>
+    </form>
+      <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script>
+        import swal from ("core");
+   </script>
+   <script>
+       function myFunction(){
+       var first = document.getElementById("fname").value;
+       var last = document.getElementById("lname").value;
+       var mail = document.getElementById("email").value;
+       var numb = document.getElementById("no").value;
+       
+   
+        // swal("Congratulations","You have successfuly registered","success");
+        swal({
+            title: "Congratulations" + `${first}` + `${last}`,
+            text: "You have won",
+            icon: "success"
+
+        });
+    }
+   
+    </script> 
+</body>
+</html>
